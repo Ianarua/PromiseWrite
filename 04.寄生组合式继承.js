@@ -1,6 +1,4 @@
 /* 通过构造函数来继承属性，通过原型链继承方法 */
-
-
 /* 父类 */
 function Person (name) {
     this.name = name;
