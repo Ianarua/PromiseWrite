@@ -182,7 +182,7 @@ class MyPromise {
             const result = [];
             let count = 0;
             promises.forEach((item, index) => {
-                MyPromise.resolve(p).then(res => {
+                MyPromise.resolve(item).then(res => {
                     result[index] = res;
                     count++;
                     count === promises.length && resolve(result);
@@ -202,6 +202,7 @@ const p1 = MyPromise.resolve(1);
 const p2 = new MyPromise((resolve, reject) => {
     setTimeout(() => {
         reject(2);
+        // resolves(2);
     }, 1000);
 });
 
